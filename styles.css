@@ -18,7 +18,7 @@ header {
     background-color: #555;
     color: white;
     text-align: left;
-    padding: 20px;
+    padding: 2vw;
     font-size: calc(7px + 1vw);
 }
 
@@ -69,14 +69,19 @@ nav ul li a {
 main {
     background-color: #ffffff;
     width: 70%;
-    padding: 20px;
+    padding: 2vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 footer {
     background-color: #555;
     color: white;
     text-align: center;
-    padding: 10px;
+    padding: 2vh;
     flex-shrink: 0;
 }
 
