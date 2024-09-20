@@ -1,4 +1,3 @@
-/* General Styling */
 * {
     box-sizing: border-box;
 }
@@ -6,37 +5,55 @@
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #f0f0f0;
-    width: 100%;
-    max-width: 1200px; /* Set your desired maximum width */
-    margin: 0 auto;
-    padding: 20px;
+    margin: 0;
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
-/* Header Styling */
 header {
     background-color: #555;
     color: white;
     text-align: left;
+    padding: 20px;
 }
 
-/* Navigation styling */
+/* Container for nav and main content */
+.container {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    width: 100%;
+}
+
 nav {
     background-color: #333;
-    width: 100%;
-    
+    width: 30%;
+    padding: 20px;
 }
 
-/* Navigation - Default to vertical */
 nav ul {
     list-style: none;
-    flex-direction: row;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
 }
 
 nav ul li {
-    margin: 10px 0;
+    background-color: #757575;
+    padding: 1vh 1vw;
+    margin: 2vh 2vw;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 nav ul li a {
@@ -44,41 +61,42 @@ nav ul li a {
     text-decoration: none;
 }
 
-/* Main Content Styling */
 main {
     background-color: #ffffff;
-    margin: 20px 0;
     width: 70%;
-    min-height: calc(100vh - 160px); /* Adjust height with calc */
+    padding: 20px;
 }
 
-/* Footer Styling */
 footer {
     background-color: #333;
     color: white;
     text-align: center;
-    width: 100%;
+    padding: 10px;
+    flex-shrink: 0;
 }
 
-/* For screens smaller than 750px */
 @media (max-width: 750px) {
-    /* Navigation becomes horizontal */
-    nav ul {
-        flex-direction: row;
-        justify-content: space-around;
-    }
 
-    nav ul li {
-        margin: 0 5px;
-    }
-
-    /* Center the header content */
     header {
         text-align: center;
     }
 
-    /* Main content takes 100% width */
+    .container {
+        flex-direction: column;
+    }
+
     main {
         width: 100%;
+        height: 100%;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
     }
 }
