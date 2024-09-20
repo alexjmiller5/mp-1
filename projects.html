@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>MP-1</title>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="styles.css">
     </head>
     <body>
@@ -28,6 +29,24 @@
                 <p>Chrome extension enabling students to sync class schedule to Google Calendar via OAuth 2.0.</p>
                 <p><strong>ChessMS</strong>: Winner of BostonHacks 2022, Best Use of CockroachDB (November 2022)</p>
                 <p>Chess game played against an AI via SMS text message, integrated with Twilio API and CockroachDB.</p>
+                <h2>JavaScript Calculator</h2>
+                <div class="calculator">
+                    <div class="inputs">
+                        <input type="number" id="first-number" placeholder="Enter first number">
+                        <input type="number" id="second-number" placeholder="Enter second number">
+                    </div>
+                    <div class="buttons">
+                        <button onclick="addition()">+</button>
+                        <button onclick="subtraction()">-</button>
+                        <button onclick="multiplication()">*</button>
+                        <button onclick="division()">/</button>
+                        <button onclick="power()">^</button>
+                        <button onclick="clearCalculator()">Clear</button>
+                    </div>
+                    <div class="result">
+                        <h3 id="output"></h3>
+                    </div>
+                </div>
             </main>
         </div>
         <footer>
